@@ -1,0 +1,120 @@
+.root {
+    -fx-background-color: #212121;
+    background-color: #212121;
+    -fx-font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    -fx-text-fill: #E0E0E0;
+}
+
+.button {
+    -fx-background-color: #2196F3;
+    background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 8 16;
+    padding: 8px 16px;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+    background-color: #1976D2;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: #424242;
+    background-color: #424242;
+    -fx-text-fill: #E0E0E0;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    border-radius: 4px;
+    -fx-border-color: #616161;
+    border-color: #616161;
+    -fx-padding: 8;
+    padding: 8px;
+}
+
+.tab-pane {
+    -fx-background-color: #303030;
+    background-color: #303030;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #424242;
+    background-color: #424242;
+}
+
+.tab {
+    -fx-background-color: #424242;
+    background-color: #424242;
+    -fx-background-radius: 4 4 0 0;
+}
+
+.tab:selected {
+    -fx-background-color: #303030;
+    background-color: #303030;
+}
+
+.chart {
+    -fx-background-color: #303030;
+    background-color: #303030;
+    -fx-padding: 10;
+    padding: 10px;
+}
+
+.chart-title {
+    -fx-font-size: 16;
+    font-size: 16px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-text-fill: #E0E0E0;
+}
+
+.axis-label {
+    -fx-font-size: 12;
+    font-size: 12px;
+    -fx-text-fill: #E0E0E0;
+}
+
+.axis {
+    -fx-tick-label-fill: #E0E0E0;
+}
+
+.menu-bar {
+    -fx-background-color: #2196F3;
+    background-color: #2196F3;
+}
+
+.menu-bar .menu {
+    -fx-text-fill: white;
+}
+
+.menu-bar .menu-item {
+    -fx-background-color: #424242;
+    background-color: #424242;
+    -fx-text-fill: #E0E0E0;
+}
+
+.menu-bar .menu-item:hover {
+    -fx-background-color: #616161;
+    background-color: #616161;
+}
+
+.label {
+    -fx-text-fill: #E0E0E0;
+}
+
+.check-box {
+    -fx-text-fill: #E0E0E0;
+}
+
+.check-box .box {
+    -fx-background-color: #424242;
+    background-color: #424242;
+    -fx-border-color: #616161;
+    border-color: #616161;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #2196F3;
+    background-color: #2196F3;
+} 

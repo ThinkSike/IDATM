@@ -1,0 +1,90 @@
+.root {
+    -fx-background-color: #f5f5f5;
+    background-color: #f5f5f5;
+    -fx-font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.button {
+    -fx-background-color: #2196F3;
+    background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 8 16;
+    padding: 8px 16px;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+    background-color: #1976D2;
+}
+
+.text-field, .combo-box {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    border-radius: 4px;
+    -fx-border-color: #BDBDBD;
+    border-color: #BDBDBD;
+    -fx-padding: 8;
+    padding: 8px;
+}
+
+.tab-pane {
+    -fx-background-color: white;
+    background-color: white;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #E0E0E0;
+    background-color: #E0E0E0;
+}
+
+.tab {
+    -fx-background-color: #F5F5F5;
+    background-color: #F5F5F5;
+    -fx-background-radius: 4 4 0 0;
+}
+
+.tab:selected {
+    -fx-background-color: white;
+    background-color: white;
+}
+
+.chart {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-padding: 10;
+    padding: 10px;
+}
+
+.chart-title {
+    -fx-font-size: 16;
+    font-size: 16px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+.axis-label {
+    -fx-font-size: 12;
+    font-size: 12px;
+}
+
+.menu-bar {
+    -fx-background-color: #2196F3;
+    background-color: #2196F3;
+}
+
+.menu-bar .menu {
+    -fx-text-fill: white;
+}
+
+.menu-bar .menu-item {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-text-fill: black;
+}
+
+.menu-bar .menu-item:hover {
+    -fx-background-color: #E3F2FD;
+    background-color: #E3F2FD;
+} 
