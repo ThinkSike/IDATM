@@ -3,10 +3,11 @@ package com.taskmanager.model;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
+import lombok.Data;
 
+@Data
 public class Task implements Comparable<Task> {
-    private String id;
+    private long id;
     private String title;
     private String description;
     private String category;
@@ -17,7 +18,6 @@ public class Task implements Comparable<Task> {
     private boolean reminderEnabled;
 
     public Task(String title, String description, String category, int priority, LocalDateTime dueDate) {
-        this.id = UUID.randomUUID().toString();
         this.title = title;
         this.description = description;
         this.category = category;
@@ -28,8 +28,15 @@ public class Task implements Comparable<Task> {
         this.reminderEnabled = false;
     }
 
+    public Task() {
+        this.tags = new HashSet<>();
+        this.completed = false;
+        this.reminderEnabled = false;
+    }
+
     // Getters and Setters
-    public String getId() { return id; }
+    public long getId() { return id; }
+    public void setId(long id) { this.id = id; }
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
     public String getDescription() { return description; }

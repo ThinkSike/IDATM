@@ -8,6 +8,13 @@ import javafx.scene.control.Label;
 import javafx.geometry.Insets;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Custom ListCell for displaying Task objects in lists.
+ * 
+ * @SuppressWarnings is used to suppress warnings related to JavaFX cell operations
+ * which are type-safe at runtime due to JavaFX's internal checks.
+ */
+@SuppressWarnings({"unchecked", "rawtypes"})
 public class TaskListCell extends ListCell<Task> {
     private final HBox content;
     private final Label titleLabel;

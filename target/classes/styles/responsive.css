@@ -1,0 +1,212 @@
+/* Responsive styling for different screen sizes */
+
+/* Base responsive styles for all sizes */
+.main-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+}
+
+.main-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Hide scrollbars completely but keep scrolling functionality */
+.invisible-scrollbar .scroll-bar:vertical,
+.invisible-scrollbar .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+.invisible-scrollbar .scroll-bar .increment-button,
+.invisible-scrollbar .scroll-bar .decrement-button,
+.invisible-scrollbar .scroll-bar .increment-arrow,
+.invisible-scrollbar .scroll-bar .decrement-arrow {
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    -fx-shape: "";
+}
+
+.invisible-scrollbar .corner {
+    -fx-background-color: transparent;
+}
+
+/* Hide scrollbars unless needed */
+.main-scroll-pane .scroll-bar:vertical,
+.main-scroll-pane .scroll-bar:horizontal,
+.dashboard-scroll .scroll-bar:vertical,
+.dashboard-scroll .scroll-bar:horizontal {
+    -fx-opacity: 0.5;
+}
+
+.main-scroll-pane .scroll-bar:vertical:hover,
+.main-scroll-pane .scroll-bar:horizontal:hover,
+.dashboard-scroll .scroll-bar:vertical:hover,
+.dashboard-scroll .scroll-bar:horizontal:hover {
+    -fx-opacity: 1;
+}
+
+/* Make scroll panes properly transparent */
+.dashboard-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.dashboard-scroll > .viewport {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+/* Make sure cards and containers can properly shrink */
+.task-card, .dashboard-card {
+    -fx-min-width: 200px;
+    -fx-pref-width: 100%;
+    -fx-max-width: 2000px;
+}
+
+/* Ensure charts resize properly */
+.chart {
+    -fx-min-width: 200px;
+    -fx-min-height: 150px;
+    -fx-pref-width: 100%;
+    -fx-pref-height: 100%;
+    -fx-padding: 5;
+}
+
+/* Statistics layout - make it adapt to available width */
+.stats-flow-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-alignment: center;
+    -fx-min-width: 200px;
+    -fx-pref-width: 100%;
+}
+
+/* Charts container styling */
+.charts-container {
+    -fx-alignment: center;
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+    -fx-min-width: 300px;
+    -fx-pref-width: 100%;
+}
+
+/* Specific adjustments for extra small screens */
+@media screen and (max-width: 480px) {
+    .task-card {
+        -fx-padding: 10;
+    }
+    
+    .task-title {
+        -fx-font-size: 16px;
+    }
+    
+    .task-description {
+        -fx-font-size: 12px;
+    }
+    
+    .task-meta {
+        -fx-font-size: 10px;
+    }
+    
+    .stats-label {
+        -fx-font-size: 12px;
+    }
+    
+    .chart-title {
+        -fx-font-size: 14px;
+    }
+    
+    .dashboard-card {
+        -fx-padding: 10;
+    }
+    
+    .card-title {
+        -fx-font-size: 16px;
+    }
+    
+    /* Make stats more compact on small screens */
+    .stat-total, .stat-completed, .stat-pending, .stat-overdue {
+        -fx-font-size: 12px;
+        -fx-padding: 5 8;
+    }
+    
+    /* Adjust chart sizing for very small screens */
+    .chart {
+        -fx-min-width: 250px;
+        -fx-pref-width: 250px;
+        -fx-min-height: 180px;
+    }
+}
+
+/* Medium screens */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .task-card {
+        -fx-padding: 15;
+    }
+    
+    /* Adjust chart sizing for medium screens */
+    .chart {
+        -fx-min-width: 350px;
+        -fx-pref-width: 350px;
+        -fx-min-height: 200px;
+    }
+    
+    /* Make stats slightly more compact */
+    .stat-total, .stat-completed, .stat-pending, .stat-overdue {
+        -fx-font-size: 14px;
+        -fx-padding: 6 10;
+    }
+}
+
+/* Add a media query for width to adjust layout on different screens */
+@media screen and (max-width: 600px) {
+    /* Adjust padding in constrained space */
+    .dashboard-container > * {
+        -fx-padding: 5;
+    }
+    
+    /* Stack elements vertically when space is limited */
+    .dashboard-row {
+        -fx-orientation: vertical;
+    }
+    
+    /* Make sure flow panes wrap correctly on small screens */
+    .charts-container {
+        -fx-pref-wrap-length: 300px;
+    }
+}
+
+/* Ensure task cards stack in small windows */
+.task-list-container {
+    -fx-wrap-text: true;
+    -fx-min-width: 200px;
+}
+
+/* Ensure text doesn't overflow on small screens */
+.label {
+    -fx-wrap-text: true;
+}
+
+/* Ensure flex containers properly wrap their children */
+.dashboard-container {
+    -fx-pref-width: 100%;
+    -fx-fill-width: true;
+    -fx-spacing: 10;
+    -fx-padding: 5;
+} 
